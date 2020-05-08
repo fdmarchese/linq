@@ -9,116 +9,11 @@ namespace Linq
     /// </summary>
     public class Program
     {
-        public static List<Alumno> Alumnos = new List<Alumno>();
-
-        /// <summary>
-        /// Relaciones:
-        ///     Alumno
-        ///         - Materia
-        ///             - Profesor
-        ///         - Examen
-        ///             - Materia
-        /// </summary>
-        private static void Initialize()
-        {
-            var profesor1 = new Profesor() { Nombre = "Juan", Apellido = "González", FechaNacimiento = new DateTime(1971, 5, 5), FechaInicioActividad = new DateTime(2010, 3, 11) };
-            var profesor2 = new Profesor() { Nombre = "Gonzalo", Apellido = "Andreoti", FechaNacimiento = new DateTime(1987, 6, 7), FechaInicioActividad = new DateTime(2016, 7, 11) };
-            var profesor3 = new Profesor() { Nombre = "Andrea", Apellido = "Ludueña", FechaNacimiento = new DateTime(1985, 1, 15), FechaInicioActividad = new DateTime(2005, 3, 1) };
-            var profesor4 = new Profesor() { Nombre = "José", Apellido = "Sand", FechaNacimiento = new DateTime(1963, 3, 20), FechaInicioActividad = new DateTime(1998, 2, 1) };
-            var profesor5 = new Profesor() { Nombre = "Micaela", Apellido = "Montero", FechaNacimiento = new DateTime(1967, 2, 10), FechaInicioActividad = new DateTime(2001, 5, 5) };
-
-            var materia1 = new Materia() { Nombre = "Programación 1", Anio = 1, Profesor = profesor1 };
-            var materia2 = new Materia() { Nombre = "Base de datos 1", Anio = 3, Profesor = profesor2 };
-            var materia3 = new Materia() { Nombre = "Sistemas Operativos", Anio = 2, Profesor = profesor3 };
-            var materia4 = new Materia() { Nombre = "Programación 3", Anio = 2, Profesor = profesor4 };
-            var materia5 = new Materia() { Nombre = "Arquitectura de Computadores", Anio = 2, Profesor = profesor5 };
-            var materia6 = new Materia() { Nombre = "Programación 2", Anio = 2, Profesor = profesor1 };
-            var materia7 = new Materia() { Nombre = "Base de datos 2", Anio = 4, Profesor = profesor2 };
-
-
-            var alumno1 = new Alumno() { Nombre = "Alumno", Apellido = "Uno", DNI = "40.000.001", FechaNacimiento = new DateTime(1996, 4, 2) };
-            var alumno2 = new Alumno() { Nombre = "Alumno", Apellido = "Dos", DNI = "41.000.222", FechaNacimiento = new DateTime(1998, 7, 3) };
-            var alumno3 = new Alumno() { Nombre = "Alumno", Apellido = "Tres", DNI = "38.203.055", FechaNacimiento = new DateTime(1995, 8, 1) };
-            var alumno4 = new Alumno() { Nombre = "Alumno", Apellido = "Cuatro", DNI = "39.990.521", FechaNacimiento = new DateTime(1997, 7, 6) };
-            var alumno5 = new Alumno() { Nombre = "Alumno", Apellido = "Cinco", DNI = "41.100.015", FechaNacimiento = new DateTime(1998, 9, 1) };
-            var alumno6 = new Alumno() { Nombre = "Alumno", Apellido = "Seis", DNI = "40.233.080", FechaNacimiento = new DateTime(1996, 12, 12) };
-            var alumno7 = new Alumno() { Nombre = "Alumno", Apellido = "Siete", DNI = "40.101.091", FechaNacimiento = new DateTime(1996, 8, 16) };
-
-
-            alumno1.Materias.Add(materia1);
-
-            alumno2.Materias.Add(materia3);
-            alumno2.Materias.Add(materia4);
-            alumno2.Materias.Add(materia5);
-            alumno2.Materias.Add(materia6);
-
-            alumno3.Materias.Add(materia7);
-
-            alumno4.Materias.Add(materia7);
-            alumno4.Materias.Add(materia2);
-
-            alumno5.Materias.Add(materia6);
-            alumno5.Materias.Add(materia2);
-            alumno5.Materias.Add(materia3);
-
-            alumno6.Materias.Add(materia6);
-            alumno6.Materias.Add(materia2);
-            alumno6.Materias.Add(materia3);
-
-            alumno7.Materias.Add(materia3);
-            alumno7.Materias.Add(materia4);
-            alumno7.Materias.Add(materia5);
-            alumno7.Materias.Add(materia6);
-
-            alumno1.Examenes.Add(new Examen() { Nota = (decimal)10, Fecha = new DateTime(2018, 8, 30), Materia = materia1 });
-            alumno1.Examenes.Add(new Examen() { Nota = (decimal)8.5, Fecha = new DateTime(2018, 11, 21), Materia = materia1 });
-
-            alumno2.Examenes.Add(new Examen() { Nota = (decimal)8, Fecha = new DateTime(2018, 8, 23), Materia = materia3 });
-            alumno2.Examenes.Add(new Examen() { Nota = (decimal)6, Fecha = new DateTime(2018, 11, 21), Materia = materia3 });
-            alumno2.Examenes.Add(new Examen() { Nota = (decimal)9, Fecha = new DateTime(2018, 8, 20), Materia = materia4 });
-            alumno2.Examenes.Add(new Examen() { Nota = (decimal)7, Fecha = new DateTime(2018, 11, 20), Materia = materia4 });
-            alumno2.Examenes.Add(new Examen() { Nota = (decimal)5, Fecha = new DateTime(2018, 8, 27), Materia = materia5 });
-            alumno2.Examenes.Add(new Examen() { Nota = (decimal)9, Fecha = new DateTime(2018, 11, 19), Materia = materia5 });
-            alumno2.Examenes.Add(new Examen() { Nota = (decimal)4, Fecha = new DateTime(2018, 8, 24), Materia = materia6 });
-            alumno2.Examenes.Add(new Examen() { Nota = (decimal)7, Fecha = new DateTime(2018, 11, 18), Materia = materia6 });
-
-            alumno3.Examenes.Add(new Examen() { Nota = (decimal)6, Fecha = new DateTime(2018, 8, 22), Materia = materia7 });
-            alumno3.Examenes.Add(new Examen() { Nota = (decimal)7.5, Fecha = new DateTime(2018, 11, 22), Materia = materia7 });
-
-            alumno4.Examenes.Add(new Examen() { Nota = (decimal)8, Fecha = new DateTime(2018, 8, 22), Materia = materia7 });
-            alumno4.Examenes.Add(new Examen() { Nota = (decimal)7.5, Fecha = new DateTime(2018, 11, 22), Materia = materia7 });
-            alumno4.Examenes.Add(new Examen() { Nota = (decimal)7, Fecha = new DateTime(2018, 8, 15), Materia = materia2 });
-            alumno4.Examenes.Add(new Examen() { Nota = (decimal)6.5, Fecha = new DateTime(2018, 11, 16), Materia = materia2 });
-
-            alumno5.Examenes.Add(new Examen() { Nota = (decimal)6, Fecha = new DateTime(2018, 8, 24), Materia = materia6 });
-            alumno5.Examenes.Add(new Examen() { Nota = (decimal)6, Fecha = new DateTime(2018, 11, 18), Materia = materia6 });
-            alumno5.Examenes.Add(new Examen() { Nota = (decimal)8, Fecha = new DateTime(2018, 8, 15), Materia = materia2 });
-            alumno5.Examenes.Add(new Examen() { Nota = (decimal)7, Fecha = new DateTime(2018, 11, 16), Materia = materia2 });
-            alumno5.Examenes.Add(new Examen() { Nota = (decimal)9.5, Fecha = new DateTime(2018, 8, 23), Materia = materia3 });
-            alumno5.Examenes.Add(new Examen() { Nota = (decimal)10, Fecha = new DateTime(2018, 11, 21), Materia = materia3 });
-
-            alumno6.Examenes.Add(new Examen() { Nota = (decimal)9, Fecha = new DateTime(2018, 8, 24), Materia = materia6 });
-            alumno6.Examenes.Add(new Examen() { Nota = (decimal)8, Fecha = new DateTime(2018, 11, 18), Materia = materia6 });
-            alumno6.Examenes.Add(new Examen() { Nota = (decimal)7.5, Fecha = new DateTime(2018, 8, 15), Materia = materia2 });
-            alumno6.Examenes.Add(new Examen() { Nota = (decimal)9, Fecha = new DateTime(2018, 11, 16), Materia = materia2 });
-            alumno6.Examenes.Add(new Examen() { Nota = (decimal)6, Fecha = new DateTime(2018, 8, 23), Materia = materia3 });
-            alumno6.Examenes.Add(new Examen() { Nota = (decimal)9, Fecha = new DateTime(2018, 11, 21), Materia = materia3 });
-
-            alumno7.Examenes.Add(new Examen() { Nota = (decimal)6, Fecha = new DateTime(2018, 8, 23), Materia = materia3 });
-            alumno7.Examenes.Add(new Examen() { Nota = (decimal)6, Fecha = new DateTime(2018, 11, 21), Materia = materia3 });
-            alumno7.Examenes.Add(new Examen() { Nota = (decimal)7, Fecha = new DateTime(2018, 8, 20), Materia = materia4 });
-            alumno7.Examenes.Add(new Examen() { Nota = (decimal)7, Fecha = new DateTime(2018, 11, 20), Materia = materia4 });
-            alumno7.Examenes.Add(new Examen() { Nota = (decimal)5, Fecha = new DateTime(2018, 8, 27), Materia = materia5 });
-            alumno7.Examenes.Add(new Examen() { Nota = (decimal)7, Fecha = new DateTime(2018, 11, 19), Materia = materia5 });
-            alumno7.Examenes.Add(new Examen() { Nota = (decimal)5, Fecha = new DateTime(2018, 8, 24), Materia = materia6 });
-            alumno7.Examenes.Add(new Examen() { Nota = (decimal)8, Fecha = new DateTime(2018, 11, 18), Materia = materia6 });
-
-            Alumnos.AddRange(new[] { alumno1, alumno2, alumno3, alumno4, alumno5, alumno6, alumno7 });
-        }
+        public static List<Alumno> Alumnos;
 
         public static void Main(string[] args)
         {
-            Initialize();
+            Alumnos = InitializeData.GetAlumnos().ToList();
 
             Console.WriteLine("Ejercicio 1:");
             foreach (var persona in Ejercicio1()) Console.WriteLine(persona.NombreApellido);
