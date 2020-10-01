@@ -64,60 +64,60 @@ namespace Linq
             alumno7.Materias.Add(materia5);
             alumno7.Materias.Add(materia6);
 
-            alumno1.Examenes.Add(new Examen() { Nota = (decimal)10, Fecha = new DateTime(2018, 8, 30), Materia = materia1 });
-            alumno1.Examenes.Add(new Examen() { Nota = (decimal)8.5, Fecha = new DateTime(2018, 11, 21), Materia = materia1 });
+            alumno1.Examenes.Add(new Examen() { Nota = 10M, Fecha = new DateTime(2018, 8, 30), Materia = materia1 });
+            alumno1.Examenes.Add(new Examen() { Nota = 8.5M, Fecha = new DateTime(2018, 11, 21), Materia = materia1 });
             
             yield return alumno1;
 
-            alumno2.Examenes.Add(new Examen() { Nota = (decimal)8, Fecha = new DateTime(2018, 8, 23), Materia = materia3 });
-            alumno2.Examenes.Add(new Examen() { Nota = (decimal)6, Fecha = new DateTime(2018, 11, 21), Materia = materia3 });
-            alumno2.Examenes.Add(new Examen() { Nota = (decimal)9, Fecha = new DateTime(2018, 8, 20), Materia = materia4 });
-            alumno2.Examenes.Add(new Examen() { Nota = (decimal)7, Fecha = new DateTime(2018, 11, 20), Materia = materia4 });
-            alumno2.Examenes.Add(new Examen() { Nota = (decimal)5, Fecha = new DateTime(2018, 8, 27), Materia = materia5 });
-            alumno2.Examenes.Add(new Examen() { Nota = (decimal)9, Fecha = new DateTime(2018, 11, 19), Materia = materia5 });
-            alumno2.Examenes.Add(new Examen() { Nota = (decimal)4, Fecha = new DateTime(2018, 8, 24), Materia = materia6 });
-            alumno2.Examenes.Add(new Examen() { Nota = (decimal)7, Fecha = new DateTime(2018, 11, 18), Materia = materia6 });
+            alumno2.Examenes.Add(new Examen() { Nota = 8M, Fecha = new DateTime(2018, 8, 23), Materia = materia3 });
+            alumno2.Examenes.Add(new Examen() { Nota = 6M, Fecha = new DateTime(2018, 11, 21), Materia = materia3 });
+            alumno2.Examenes.Add(new Examen() { Nota = 9M, Fecha = new DateTime(2018, 8, 20), Materia = materia4 });
+            alumno2.Examenes.Add(new Examen() { Nota = 7M, Fecha = new DateTime(2018, 11, 20), Materia = materia4 });
+            alumno2.Examenes.Add(new Examen() { Nota = 5M, Fecha = new DateTime(2018, 8, 27), Materia = materia5 });
+            alumno2.Examenes.Add(new Examen() { Nota = 9M, Fecha = new DateTime(2018, 11, 19), Materia = materia5 });
+            alumno2.Examenes.Add(new Examen() { Nota = 4M, Fecha = new DateTime(2018, 8, 24), Materia = materia6 });
+            alumno2.Examenes.Add(new Examen() { Nota = 7M, Fecha = new DateTime(2018, 11, 18), Materia = materia6 });
 
             yield return alumno2;
 
-            alumno3.Examenes.Add(new Examen() { Nota = (decimal)6, Fecha = new DateTime(2018, 8, 22), Materia = materia7 });
-            alumno3.Examenes.Add(new Examen() { Nota = (decimal)7.5, Fecha = new DateTime(2018, 11, 22), Materia = materia7 });
+            alumno3.Examenes.Add(new Examen() { Nota = 6M, Fecha = new DateTime(2018, 8, 22), Materia = materia7 });
+            alumno3.Examenes.Add(new Examen() { Nota = 7.5M, Fecha = new DateTime(2018, 11, 22), Materia = materia7 });
 
             yield return alumno3;
 
-            alumno4.Examenes.Add(new Examen() { Nota = (decimal)8, Fecha = new DateTime(2018, 8, 22), Materia = materia7 });
-            alumno4.Examenes.Add(new Examen() { Nota = (decimal)7.5, Fecha = new DateTime(2018, 11, 22), Materia = materia7 });
-            alumno4.Examenes.Add(new Examen() { Nota = (decimal)7, Fecha = new DateTime(2018, 8, 15), Materia = materia2 });
-            alumno4.Examenes.Add(new Examen() { Nota = (decimal)6.5, Fecha = new DateTime(2018, 11, 16), Materia = materia2 });
+            alumno4.Examenes.Add(new Examen() { Nota = 8M, Fecha = new DateTime(2018, 8, 22), Materia = materia7 });
+            alumno4.Examenes.Add(new Examen() { Nota = 7.5M, Fecha = new DateTime(2018, 11, 22), Materia = materia7 });
+            alumno4.Examenes.Add(new Examen() { Nota = 7M, Fecha = new DateTime(2018, 8, 15), Materia = materia2 });
+            alumno4.Examenes.Add(new Examen() { Nota = 6.5M, Fecha = new DateTime(2018, 11, 16), Materia = materia2 });
 
             yield return alumno4;
 
-            alumno5.Examenes.Add(new Examen() { Nota = (decimal)6, Fecha = new DateTime(2018, 8, 24), Materia = materia6 });
-            alumno5.Examenes.Add(new Examen() { Nota = (decimal)6, Fecha = new DateTime(2018, 11, 18), Materia = materia6 });
-            alumno5.Examenes.Add(new Examen() { Nota = (decimal)8, Fecha = new DateTime(2018, 8, 15), Materia = materia2 });
-            alumno5.Examenes.Add(new Examen() { Nota = (decimal)7, Fecha = new DateTime(2018, 11, 16), Materia = materia2 });
-            alumno5.Examenes.Add(new Examen() { Nota = (decimal)9.5, Fecha = new DateTime(2018, 8, 23), Materia = materia3 });
-            alumno5.Examenes.Add(new Examen() { Nota = (decimal)10, Fecha = new DateTime(2018, 11, 21), Materia = materia3 });
+            alumno5.Examenes.Add(new Examen() { Nota = 6M, Fecha = new DateTime(2018, 8, 24), Materia = materia6 });
+            alumno5.Examenes.Add(new Examen() { Nota = 6M, Fecha = new DateTime(2018, 11, 18), Materia = materia6 });
+            alumno5.Examenes.Add(new Examen() { Nota = 8M, Fecha = new DateTime(2018, 8, 15), Materia = materia2 });
+            alumno5.Examenes.Add(new Examen() { Nota = 7M, Fecha = new DateTime(2018, 11, 16), Materia = materia2 });
+            alumno5.Examenes.Add(new Examen() { Nota = 9.5M, Fecha = new DateTime(2018, 8, 23), Materia = materia3 });
+            alumno5.Examenes.Add(new Examen() { Nota = 10M, Fecha = new DateTime(2018, 11, 21), Materia = materia3 });
 
             yield return alumno5;
 
-            alumno6.Examenes.Add(new Examen() { Nota = (decimal)9, Fecha = new DateTime(2018, 8, 24), Materia = materia6 });
-            alumno6.Examenes.Add(new Examen() { Nota = (decimal)8, Fecha = new DateTime(2018, 11, 18), Materia = materia6 });
-            alumno6.Examenes.Add(new Examen() { Nota = (decimal)7.5, Fecha = new DateTime(2018, 8, 15), Materia = materia2 });
-            alumno6.Examenes.Add(new Examen() { Nota = (decimal)9, Fecha = new DateTime(2018, 11, 16), Materia = materia2 });
-            alumno6.Examenes.Add(new Examen() { Nota = (decimal)6, Fecha = new DateTime(2018, 8, 23), Materia = materia3 });
-            alumno6.Examenes.Add(new Examen() { Nota = (decimal)9, Fecha = new DateTime(2018, 11, 21), Materia = materia3 });
+            alumno6.Examenes.Add(new Examen() { Nota = 9M, Fecha = new DateTime(2018, 8, 24), Materia = materia6 });
+            alumno6.Examenes.Add(new Examen() { Nota = 8M, Fecha = new DateTime(2018, 11, 18), Materia = materia6 });
+            alumno6.Examenes.Add(new Examen() { Nota = 7.5M, Fecha = new DateTime(2018, 8, 15), Materia = materia2 });
+            alumno6.Examenes.Add(new Examen() { Nota = 9M, Fecha = new DateTime(2018, 11, 16), Materia = materia2 });
+            alumno6.Examenes.Add(new Examen() { Nota = 6M, Fecha = new DateTime(2018, 8, 23), Materia = materia3 });
+            alumno6.Examenes.Add(new Examen() { Nota = 9M, Fecha = new DateTime(2018, 11, 21), Materia = materia3 });
 
             yield return alumno6;
 
-            alumno7.Examenes.Add(new Examen() { Nota = (decimal)6, Fecha = new DateTime(2018, 8, 23), Materia = materia3 });
-            alumno7.Examenes.Add(new Examen() { Nota = (decimal)6, Fecha = new DateTime(2018, 11, 21), Materia = materia3 });
-            alumno7.Examenes.Add(new Examen() { Nota = (decimal)7, Fecha = new DateTime(2018, 8, 20), Materia = materia4 });
-            alumno7.Examenes.Add(new Examen() { Nota = (decimal)7, Fecha = new DateTime(2018, 11, 20), Materia = materia4 });
-            alumno7.Examenes.Add(new Examen() { Nota = (decimal)5, Fecha = new DateTime(2018, 8, 27), Materia = materia5 });
-            alumno7.Examenes.Add(new Examen() { Nota = (decimal)7, Fecha = new DateTime(2018, 11, 19), Materia = materia5 });
-            alumno7.Examenes.Add(new Examen() { Nota = (decimal)5, Fecha = new DateTime(2018, 8, 24), Materia = materia6 });
-            alumno7.Examenes.Add(new Examen() { Nota = (decimal)8, Fecha = new DateTime(2018, 11, 18), Materia = materia6 });
+            alumno7.Examenes.Add(new Examen() { Nota = 6M, Fecha = new DateTime(2018, 8, 23), Materia = materia3 });
+            alumno7.Examenes.Add(new Examen() { Nota = 6M, Fecha = new DateTime(2018, 11, 21), Materia = materia3 });
+            alumno7.Examenes.Add(new Examen() { Nota = 7M, Fecha = new DateTime(2018, 8, 20), Materia = materia4 });
+            alumno7.Examenes.Add(new Examen() { Nota = 7M, Fecha = new DateTime(2018, 11, 20), Materia = materia4 });
+            alumno7.Examenes.Add(new Examen() { Nota = 5M, Fecha = new DateTime(2018, 8, 27), Materia = materia5 });
+            alumno7.Examenes.Add(new Examen() { Nota = 7M, Fecha = new DateTime(2018, 11, 19), Materia = materia5 });
+            alumno7.Examenes.Add(new Examen() { Nota = 5M, Fecha = new DateTime(2018, 8, 24), Materia = materia6 });
+            alumno7.Examenes.Add(new Examen() { Nota = 8M, Fecha = new DateTime(2018, 11, 18), Materia = materia6 });
 
             yield return alumno7;
         }
