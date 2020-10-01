@@ -104,7 +104,6 @@ namespace Linq
         /// 
         /// Expected result:
         ///     González, Juan
-        ///     Ludueña, Andrea
         /// </summary>
         public static IEnumerable<Persona> Ejercicio5()
         {
